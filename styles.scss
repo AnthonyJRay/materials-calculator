@@ -14,18 +14,40 @@ body {
 .material-dropdown {
     border: .5px solid black;
     border-radius: 2px;
-    padding: 10px;
+    padding: 8px;
     background-color: inherit;
 }
 
 // Add Area Button Styles
 .add-area {
-    padding: 10px;
+    padding: 8px;
+}
+
+.measurements {
+    margin-top: 16px;
+}
+
+.newArea {
+    display: flex;
+    justify-content: space-around;
+}
+
+.lengthWrapper,
+.widthWrapper {
+    display: flex;
+    flex-direction: column;
+
+    &>.innerLabel {
+        margin-bottom: 0;
+    }
 }
 
 // Measurement Input Styles
-
-.measurement {
-    margin: 5px;
-    width: 50px;
+.length-measurement,
+.width-measurement {
+    width: 100px;
+    margin: 8px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-align: center;
 }
