@@ -12,6 +12,12 @@ body {
   text-align: center;
 }
 
+.main-header {
+  border: 1px solid black;
+  width: 90%;
+  margin: 10px;
+}
+
 .material-dropdown {
   border: .5px solid black;
   border-radius: 2px;
@@ -25,6 +31,13 @@ body {
 
 .measurements {
   margin-top: 16px;
+}
+
+.measurements-card {
+  border: 1px solid black;
+  width: 75%;
+  padding: 15px;
+  margin: 10px auto;
 }
 
 .newArea {
