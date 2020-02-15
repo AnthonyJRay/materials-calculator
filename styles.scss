@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-image: linear-gradient(#3920, #0239);
+    height: 100vh;
+    text-align: center;
+}
+
+// Material Dropdown Menu Styles
+.material-dropdown {
+    border: .5px solid black;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: inherit;
+}
+
+// Add Area Button Styles
+.add-area {
+    padding: 10px;
+}
+
+// Measurement Input Styles
+
+.measurement {
+    margin: 5px;
+    width: 50px;
+}
