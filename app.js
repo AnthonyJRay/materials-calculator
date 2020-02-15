@@ -10,6 +10,39 @@ const span = document.createElement('span');
 
 areaDisplay.innerHTML = '0';
 
+const materials = {
+  carpet: {
+    type: 'Carpet',
+    calc: (sqft, rollWidth) => {
+      return sqft / rollWidth;
+    }
+  },
+  hardwood: {
+    type: 'Engineered Hardwood',
+    calc: (sqft, boxft) => {
+      return sqft / boxft;
+    }
+  },
+  lvp: {
+    type: 'Luxury Vinyl Plank',
+    calc: (sqft, boxft) => {
+      return sqft / boxft;
+    }
+  },
+  laminate: {
+    type: 'Laminate',
+    calc: (sqft, boxft) => {
+      return sqft / boxft;
+    }
+  },
+  linoleum: {
+    type: 'Sheet Vinyl',
+    calc: (sqft, rollWidth) => {
+      return sqft / rollWidth;
+    }
+  }
+};
+
 // Add New Area button
 addAreaBtn.onclick = () => {
   let newArea = document.createElement('div');
