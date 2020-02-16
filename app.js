@@ -4,16 +4,38 @@ const measurementsBody = document.querySelector('.measurements');
 const widths = document.querySelectorAll('.width-measurement');
 const calcBtn = document.querySelector('.calc-btn');
 const areaDisplay = document.querySelector('.display-area');
-
-// Global Elements
-const span = document.createElement('span');
-
+const dropdown = document.querySelector('.material-dropdown');
+const materialType = document.querySelector('.material-type-value');
+const materialAmount = document.querySelector('.material-amount-value');
 areaDisplay.innerHTML = '0';
+
+let materialSelected;
+
+// let selectedMaterial = (dropdown.onchange = () => {
+//   return dropdown.options[dropdown.selectedIndex].value;
+//   // console.log(selectedMaterial);
+// });
+
+const materialDropdown = () => {
+  return dropdown.options[dropdown.selectedIndex].value;
+};
+
+// const materialSelected = (dropdown.onchange = () => {
+//   materialDropdown();
+//   console.log(materialDropdown());
+// });
+
+dropdown.onchange = () => {
+  materialSelected = materialDropdown();
+  // console.log(materialSelected);
+};
+
+// console.log(materialSelected);
 
 const materials = {
   carpet: {
     type: 'Carpet',
-    calc: (sqft, rollWidth) => {
+    calc: (sqft, rollWidth = 12) => {
       return sqft / rollWidth;
     }
   },
@@ -37,7 +59,7 @@ const materials = {
   },
   linoleum: {
     type: 'Sheet Vinyl',
-    calc: (sqft, rollWidth) => {
+    calc: (sqft, rollWidth = 12) => {
       return sqft / rollWidth;
     }
   }
@@ -109,7 +131,6 @@ calcBtn.onclick = () => {
     if (lengthArr.length === widthArr.length) {
       areaSum = lengthArr[i] * widthArr[i];
       totalSum += areaSum;
-      console.log(totalSum);
     }
   }
 
@@ -122,6 +143,12 @@ calcBtn.onclick = () => {
   } else {
     areaDisplay.innerHTML = totalSum;
   }
-};
 
-// Display total Area sqft
+  for (const property in materials) {
+    if (property === materialSelected) {
+      console.log(materials[property].type);
+      materialType.innerHTML = materials[property].type;
+      materialAmount.innerHTML = materials[property].calc(totalSum);
+    }
+  }
+};
