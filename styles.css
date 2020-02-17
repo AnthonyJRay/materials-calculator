@@ -18,7 +18,6 @@ body {
   margin: 10px auto;
   padding: 8px;
   font-family: "Quicksand", sans-serif;
-  background-color: #fff;
 }
 
 .material-card {
@@ -38,6 +37,7 @@ body {
 
 .dropdown-label {
   margin: 1em;
+  font-weight: bold;
 }
 
 .material-dropdown {
@@ -59,6 +59,14 @@ body {
 
 .add-area {
   padding: 8px;
+  background-color: #64e687;
+  border: none;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.add-area:hover {
+  background-color: #4db769;
 }
 
 .measurements {
@@ -71,16 +79,26 @@ body {
   margin: 10px auto;
 }
 
-.newArea {
+.new-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 75%;
+  margin: 0.75em;
+  padding: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #444;
+  background-color: rgba(224, 223, 223, 0.442);
 }
 
-.lengthWrapper,
-.widthWrapper {
+.rooms-wrapper {
+  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,20 +106,58 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 90%;
+  padding: 0;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.lengthWrapper > .innerLabel,
-.widthWrapper > .innerLabel {
-  margin-bottom: 0;
+.length-measurement > input,
+.width-measurement > input {
+  width: 50px;
 }
 
-.length-measurement,
-.width-measurement {
-  width: 100px;
-  margin: 8px;
-  font-size: 24px;
-  letter-spacing: 2px;
+.length-measurement > span,
+.width-measurement > span {
+  font-style: italic;
+  margin: 1rem;
+  font-size: 16px;
+}
+
+.delButton {
+  width: 20px;
+  height: 20px;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #e15a46;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.delButton:hover {
+  background-color: #af4838;
+}
+
+@media (min-width: 559px) {
+  .delButton {
+    margin-right: 16px;
+  }
+}
+
+.calc-btn {
+  background-color: #64e687;
+  border: none;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.calc-btn:hover {
+  background-color: #4db769;
 }
 
 .material-list {

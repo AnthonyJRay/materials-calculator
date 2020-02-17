@@ -1,5 +1,9 @@
 $Quicksand: 'Quicksand', sans-serif;
 $Ubuntu: 'Ubuntu', sans-serif;
+$Danger: #e15a46;
+$DangerHover: #af4838;
+$Green: #64e687;
+$GreenHover: #4db769;
 
 body {
   margin: 0;
@@ -19,7 +23,6 @@ body {
   margin: 10px auto;
   padding: 8px;
   font-family: $Quicksand;
-  background-color: #fff;
 }
 
 .material-card {
@@ -32,6 +35,7 @@ body {
 
 .dropdown-label {
   margin: 1em;
+  font-weight: bold;
 }
 
 // Material Dropdown Menu Styles
@@ -53,6 +57,13 @@ body {
 // Add Area Button Styles
 .add-area {
   padding: 8px;
+  background-color: $Green;
+  border: none;
+  border-style: none;
+  border-radius: 5px;
+  &:hover {
+    background-color: $GreenHover;
+  }
 }
 
 .measurements {
@@ -65,29 +76,67 @@ body {
   margin: 10px auto;
 }
 
-.newArea {
+.new-area {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  width: 75%;
+  margin: 0.75em;
+  padding: 16px;
+  justify-content: center;
+  border: 1px solid #444;
+  background-color: rgba(224, 223, 223, 0.442);
 }
 
-.lengthWrapper,
-.widthWrapper {
+.rooms-wrapper {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
-
-  & > .innerLabel {
-    margin-bottom: 0;
-  }
+  width: 90%;
+  padding: 0;
+  margin: auto;
+  align-items: center;
 }
 
 // Measurement Input Styles
 .length-measurement,
 .width-measurement {
-  width: 100px;
-  margin: 8px;
-  font-size: 24px;
-  letter-spacing: 2px;
+  & > input {
+    width: 50px;
+  }
+  & > span {
+    font-style: italic;
+    margin: 1rem;
+    font-size: 16px;
+  }
+}
+
+.delButton {
+  width: 20px;
+  height: 20px;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: $Danger;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 2px;
+  &:hover {
+    background-color: $DangerHover;
+  }
+  @media (min-width: 559px) {
+    margin-right: 16px;
+  }
+}
+
+.calc-btn {
+  background-color: $Green;
+  border: none;
+  border-style: none;
+  border-radius: 5px;
+  &:hover {
+    background-color: $GreenHover;
+  }
 }
 
 .material-list {
