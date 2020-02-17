@@ -31,8 +31,7 @@ dropdown.onchange = () => {
     boxSize.style.visibility = 'initial';
   }
 };
-
-const hello = document.querySelector('#size-value-16').checked;
+const hello = document.getElementById('size-value-16').checked;
 if (document.querySelector('#size-value-16').checked) {
   boxSizeNum = 16;
   console.log('16 is checked');
@@ -156,9 +155,16 @@ calcBtn.onclick = () => {
     areaDisplay.innerHTML = totalSum;
   }
 
+  const radioBtn = [...document.querySelectorAll('input[type="radio"]')];
+
+  for (let i = 0; i < radioBtn.length; i++) {
+    if (radioBtn[i].checked) {
+      boxSizeNum = radioBtn[i].value;
+    }
+  }
+
   for (const property in materials) {
     if (property === materialSelected) {
-      console.log(materials[property].type);
       materialType.innerHTML = materials[property].type;
       materialAmount.innerHTML = materials[property].calc(totalSum).toFixed(2);
     }
