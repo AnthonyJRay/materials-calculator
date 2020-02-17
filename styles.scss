@@ -1,3 +1,6 @@
+$Quicksand: 'Quicksand', sans-serif;
+$Ubuntu: 'Ubuntu', sans-serif;
+
 body {
   margin: 0;
   padding: 0;
@@ -8,28 +11,43 @@ body {
   background-image: linear-gradient(#3920, #0239);
   height: 100%;
   text-align: center;
+  font-family: $Ubuntu;
 }
 
 .main-header {
-  border: 1px solid black;
   width: 90%;
   margin: 10px auto;
+  padding: 8px;
+  font-family: $Quicksand;
+  background-color: #fff;
 }
 
 .material-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 75%;
   margin: auto;
 }
 
+.dropdown-label {
+  margin: 1em;
+}
+
 // Material Dropdown Menu Styles
 .material-dropdown {
-  border: 0.5px solid black;
+  width: 75%;
   border-radius: 2px;
   padding: 8px;
   margin-bottom: 3rem;
   background-color: inherit;
+  &:hover {
+    background-color: #fff;
+    border: 0.85px solid #0239;
+  }
+  & > .material-option {
+    text-align: center;
+  }
 }
 
 // Add Area Button Styles
@@ -42,7 +60,6 @@ body {
 }
 
 .measurements-card {
-  border: 1px solid black;
   width: 75%;
   padding: 15px;
   margin: 10px auto;
@@ -96,4 +113,11 @@ body {
       margin-right: 16px;
     }
   }
+}
+
+.required {
+  font-style: italic;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: red;
 }

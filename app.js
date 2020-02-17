@@ -166,7 +166,7 @@ calcBtn.onclick = () => {
   for (const property in materials) {
     if (property === materialSelected) {
       materialType.innerHTML = materials[property].type;
-      materialAmount.innerHTML = materials[property].calc(totalSum).toFixed(2);
+      materialAmount.innerHTML = materials[property].calc(totalSum).toFixed(1);
     }
   }
 };
