@@ -3,11 +3,12 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-image: url("./dist/assets/flooring-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#3920), to(#0239));
-  background-image: linear-gradient(#3920, #0239);
   height: 100%;
   text-align: center;
   font-family: "Ubuntu", sans-serif;
@@ -16,8 +17,10 @@ body {
 .main-header {
   width: 90%;
   margin: 10px auto;
-  padding: 8px;
+  padding: 16px;
   font-family: "Quicksand", sans-serif;
+  background-color: rgba(207, 207, 207, 0.408);
+  border-radius: 5px;
 }
 
 .material-card {
@@ -33,6 +36,8 @@ body {
           align-items: center;
   width: 75%;
   margin: auto;
+  background-color: rgba(207, 207, 207, 0.408);
+  border-radius: 5px;
 }
 
 .dropdown-label {
@@ -45,24 +50,41 @@ body {
   border-radius: 2px;
   padding: 8px;
   margin-bottom: 3rem;
-  background-color: inherit;
+  background-color: rgba(250, 250, 250, 0.823);
+  border: none;
 }
 
 .material-dropdown:hover {
   background-color: #fff;
-  border: 0.85px solid #0239;
+}
+
+.material-dropdown:active, .material-dropdown:focus {
+  background-color: inherit;
 }
 
 .material-dropdown > .material-option {
   text-align: center;
 }
 
+.stats-wrapper {
+  background-color: rgba(207, 207, 207, 0.408);
+  border-radius: 5px;
+  max-width: 75%;
+  margin: auto;
+  padding: 16px;
+}
+
 .add-area {
   padding: 8px;
   background-color: #64e687;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
   border: none;
   border-style: none;
   border-radius: 5px;
+  letter-spacing: 1px;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .add-area:hover {
@@ -75,8 +97,10 @@ body {
 
 .measurements-card {
   width: 75%;
-  padding: 15px;
+  padding: 16px;
   margin: 10px auto;
+  background-color: rgba(207, 207, 207, 0.408);
+  border-radius: 5px;
 }
 
 .new-area {
@@ -88,12 +112,13 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 75%;
-  margin: 0.75em;
+  margin: 0.5em;
   padding: 16px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #444;
+  border: 1px solid #333;
+  border-radius: 5px;
   background-color: rgba(224, 223, 223, 0.442);
 }
 
@@ -123,7 +148,7 @@ body {
 .width-measurement > span {
   font-style: italic;
   margin: 1rem;
-  font-size: 16px;
+  font-size: 10px;
 }
 
 .delButton {
@@ -151,9 +176,15 @@ body {
 
 .calc-btn {
   background-color: #64e687;
+  color: #fff;
+  font-weight: bold;
   border: none;
   border-style: none;
   border-radius: 5px;
+  padding: 16px;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .calc-btn:hover {
@@ -192,6 +223,8 @@ body {
 
 .box-sizing-active > .box-sizing-form > .size-label {
   margin-right: 16px;
+  letter-spacing: 1px;
+  font-size: 14px;
 }
 
 .required {
@@ -199,5 +232,11 @@ body {
   font-size: 0.75rem;
   letter-spacing: 2px;
   color: red;
+}
+
+.error {
+  color: #e15a46;
+  font-size: 12px;
+  font-style: italic;
 }
 /*# sourceMappingURL=styles.css.map */

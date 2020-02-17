@@ -19,8 +19,8 @@
         <h1 class="main-header">Flooring Material Calculator</h1>
         <div class="material-card">
             <label class="dropdown-label" for="materials">Select a Material:</label>
-            <select class="material-dropdown" name="" id="materials">
-                <option class="material-option" value="">Please select a material</option>
+            <select class="material-dropdown" name="" id="materials" required>
+                <option class="material-option" value="" disabled selected>Please select a material</option>
                 <option class="material-option" value="carpet">Carpet</option>
                 <option class="material-option" value="lvp">Luxury Vinyl Plank</option>
                 <option class="material-option" value="laminate">Laminate</option>
@@ -29,8 +29,8 @@
             </select>
         </div>
         <div class="box-sizing-active">
-            <span class="required">(Required!)</span>
             <caption>Sqft Per Box:</caption>
+            <span class="required">(Required!)</span>
             <form class="box-sizing-form">
                 <input type="radio" id="size-value-16" name="sqft" value="16">
                 <label class="size-label" for="size-value-16">16 sqft</label><br>
@@ -41,7 +41,6 @@
             </form>
         </div>
         <div class="measurements-card">
-            <h2 class="measurements-header">Rooms</h2>
             <button class="add-area">Add New Room</button>
             <div class="measurements">
                 <ul class="rooms-wrapper"></ul>

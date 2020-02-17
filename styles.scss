@@ -4,15 +4,20 @@ $Danger: #e15a46;
 $DangerHover: #af4838;
 $Green: #64e687;
 $GreenHover: #4db769;
+$Transparent-Bg: rgba(207, 207, 207, 0.408);
+$Corner-Rounded: 5px;
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-image: url('./dist/assets/flooring-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wrapper {
-  background-image: linear-gradient(#3920, #0239);
+  //   background-image: linear-gradient(#3920, #0239);
   height: 100%;
   text-align: center;
   font-family: $Ubuntu;
@@ -21,9 +26,17 @@ body {
 .main-header {
   width: 90%;
   margin: 10px auto;
-  padding: 8px;
+  padding: 16px;
   font-family: $Quicksand;
+  background-color: $Transparent-Bg;
+  border-radius: $Corner-Rounded;
 }
+
+// May use later, don't remove yet!
+// .company-caption {
+//   font-size: 10px;
+//   font-style: italic;
+// }
 
 .material-card {
   display: flex;
@@ -31,6 +44,8 @@ body {
   align-items: center;
   width: 75%;
   margin: auto;
+  background-color: $Transparent-Bg;
+  border-radius: $Corner-Rounded;
 }
 
 .dropdown-label {
@@ -44,23 +59,41 @@ body {
   border-radius: 2px;
   padding: 8px;
   margin-bottom: 3rem;
-  background-color: inherit;
+  background-color: rgba(250, 250, 250, 0.823);
+  border: none;
   &:hover {
     background-color: #fff;
-    border: 0.85px solid #0239;
+    // border: 0.85px solid #0239;
+  }
+  &:active,
+  &:focus {
+    background-color: inherit;
   }
   & > .material-option {
     text-align: center;
   }
 }
 
+.stats-wrapper {
+  background-color: $Transparent-Bg;
+  border-radius: $Corner-Rounded;
+  max-width: 75%;
+  margin: auto;
+  padding: 16px;
+}
+
 // Add Area Button Styles
 .add-area {
   padding: 8px;
   background-color: $Green;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
   border: none;
   border-style: none;
   border-radius: 5px;
+  letter-spacing: 1px;
+  font-family: $Ubuntu;
   &:hover {
     background-color: $GreenHover;
   }
@@ -72,18 +105,21 @@ body {
 
 .measurements-card {
   width: 75%;
-  padding: 15px;
+  padding: 16px;
   margin: 10px auto;
+  background-color: $Transparent-Bg;
+  border-radius: $Corner-Rounded;
 }
 
 .new-area {
   display: flex;
   flex-direction: row;
   width: 75%;
-  margin: 0.75em;
+  margin: 0.5em;
   padding: 16px;
   justify-content: center;
-  border: 1px solid #444;
+  border: 1px solid #333;
+  border-radius: 5px;
   background-color: rgba(224, 223, 223, 0.442);
 }
 
@@ -106,7 +142,7 @@ body {
   & > span {
     font-style: italic;
     margin: 1rem;
-    font-size: 16px;
+    font-size: 10px;
   }
 }
 
@@ -131,9 +167,15 @@ body {
 
 .calc-btn {
   background-color: $Green;
+  color: #fff;
+  font-weight: bold;
   border: none;
   border-style: none;
   border-radius: 5px;
+  padding: 16px;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  font-family: $Ubuntu;
   &:hover {
     background-color: $GreenHover;
   }
@@ -160,6 +202,8 @@ body {
     padding: 8px;
     & > .size-label {
       margin-right: 16px;
+      letter-spacing: 1px;
+      font-size: 14px;
     }
   }
 }
@@ -169,4 +213,10 @@ body {
   font-size: 0.75rem;
   letter-spacing: 2px;
   color: red;
+}
+
+.error {
+  color: $Danger;
+  font-size: 12px;
+  font-style: italic;
 }
