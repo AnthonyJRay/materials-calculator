@@ -24,12 +24,13 @@ body {
 }
 
 .main-header {
-  width: 90%;
+  width: 75%;
   margin: 10px auto;
   padding: 16px;
   font-family: $Quicksand;
   background-color: $Transparent-Bg;
   border-radius: $Corner-Rounded;
+  color: rgba(78, 20, 15, 0.877);
 }
 
 // May use later, don't remove yet!
@@ -43,6 +44,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 75%;
+  padding: 16px;
   margin: auto;
   background-color: $Transparent-Bg;
   border-radius: $Corner-Rounded;
@@ -57,7 +59,7 @@ body {
 .material-dropdown {
   width: 75%;
   border-radius: 2px;
-  padding: 8px;
+  padding: 16px;
   margin-bottom: 3rem;
   background-color: rgba(250, 250, 250, 0.823);
   border: none;
@@ -194,7 +196,12 @@ body {
 }
 
 .box-sizing-active {
-  visibility: hidden;
+  display: none;
+  background-color: rgba(197, 224, 186, 0.823);
+  width: 75%;
+  padding: 16px;
+  margin: 1rem auto;
+  border-radius: $Corner-Rounded;
   & > .box-sizing-form {
     display: flex;
     justify-content: center;
@@ -210,9 +217,10 @@ body {
 
 .required {
   font-style: italic;
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   letter-spacing: 2px;
   color: red;
+  font-weight: bold;
 }
 
 .error {

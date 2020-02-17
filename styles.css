@@ -15,12 +15,13 @@ body {
 }
 
 .main-header {
-  width: 90%;
+  width: 75%;
   margin: 10px auto;
   padding: 16px;
   font-family: "Quicksand", sans-serif;
   background-color: rgba(207, 207, 207, 0.408);
   border-radius: 5px;
+  color: rgba(78, 20, 15, 0.877);
 }
 
 .material-card {
@@ -35,6 +36,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 75%;
+  padding: 16px;
   margin: auto;
   background-color: rgba(207, 207, 207, 0.408);
   border-radius: 5px;
@@ -48,7 +50,7 @@ body {
 .material-dropdown {
   width: 75%;
   border-radius: 2px;
-  padding: 8px;
+  padding: 16px;
   margin-bottom: 3rem;
   background-color: rgba(250, 250, 250, 0.823);
   border: none;
@@ -207,7 +209,12 @@ body {
 }
 
 .box-sizing-active {
-  visibility: hidden;
+  display: none;
+  background-color: rgba(197, 224, 186, 0.823);
+  width: 75%;
+  padding: 16px;
+  margin: 1rem auto;
+  border-radius: 5px;
 }
 
 .box-sizing-active > .box-sizing-form {
@@ -229,9 +236,10 @@ body {
 
 .required {
   font-style: italic;
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   letter-spacing: 2px;
   color: red;
+  font-weight: bold;
 }
 
 .error {

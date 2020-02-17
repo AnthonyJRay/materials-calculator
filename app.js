@@ -23,13 +23,13 @@ dropdown.onchange = () => {
 
   if (materialSelected === 'carpet') {
     comesBoxed = false;
-    boxSize.style.visibility = 'hidden';
+    boxSize.style.display = 'none';
   } else if (materialSelected === 'linoleum') {
     comesBoxed = false;
-    boxSize.style.visibility = 'hidden';
+    boxSize.style.display = 'none';
   } else {
     comesBoxed = true;
-    boxSize.style.visibility = 'initial';
+    boxSize.style.display = 'block';
   }
 };
 
