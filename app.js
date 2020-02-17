@@ -7,30 +7,42 @@ const areaDisplay = document.querySelector('.display-area');
 const dropdown = document.querySelector('.material-dropdown');
 const materialType = document.querySelector('.material-type-value');
 const materialAmount = document.querySelector('.material-amount-value');
-areaDisplay.innerHTML = '0';
-
+const boxSize = document.querySelector('.box-sizing-active');
 let materialSelected;
-
-// let selectedMaterial = (dropdown.onchange = () => {
-//   return dropdown.options[dropdown.selectedIndex].value;
-//   // console.log(selectedMaterial);
-// });
+let comesBoxed;
+let boxSizeNum;
+areaDisplay.innerHTML = '0';
 
 const materialDropdown = () => {
   return dropdown.options[dropdown.selectedIndex].value;
 };
 
-// const materialSelected = (dropdown.onchange = () => {
-//   materialDropdown();
-//   console.log(materialDropdown());
-// });
-
 dropdown.onchange = () => {
   materialSelected = materialDropdown();
-  // console.log(materialSelected);
+
+  if (materialSelected === 'carpet') {
+    comesBoxed = false;
+    boxSize.style.visibility = 'hidden';
+  } else if (materialSelected === 'linoleum') {
+    comesBoxed = false;
+    boxSize.style.visibility = 'hidden';
+  } else {
+    comesBoxed = true;
+    boxSize.style.visibility = 'initial';
+  }
 };
 
-// console.log(materialSelected);
+const hello = document.querySelector('#size-value-16').checked;
+if (document.querySelector('#size-value-16').checked) {
+  boxSizeNum = 16;
+  console.log('16 is checked');
+} else if (document.querySelector('#size-value-20').checked) {
+  boxSizeNum = 20;
+  console.log('20 is checked');
+} else if (document.querySelector('#size-value-24').checked) {
+  boxSizeNum = 24;
+  console.log('24 is checked');
+}
 
 const materials = {
   carpet: {
@@ -41,19 +53,19 @@ const materials = {
   },
   hardwood: {
     type: 'Engineered Hardwood',
-    calc: (sqft, boxft) => {
+    calc: (sqft, boxft = boxSizeNum) => {
       return sqft / boxft;
     }
   },
   lvp: {
     type: 'Luxury Vinyl Plank',
-    calc: (sqft, boxft) => {
+    calc: (sqft, boxft = boxSizeNum) => {
       return sqft / boxft;
     }
   },
   laminate: {
     type: 'Laminate',
-    calc: (sqft, boxft) => {
+    calc: (sqft, boxft = boxSizeNum) => {
       return sqft / boxft;
     }
   },
@@ -148,7 +160,7 @@ calcBtn.onclick = () => {
     if (property === materialSelected) {
       console.log(materials[property].type);
       materialType.innerHTML = materials[property].type;
-      materialAmount.innerHTML = materials[property].calc(totalSum);
+      materialAmount.innerHTML = materials[property].calc(totalSum).toFixed(2);
     }
   }
 };

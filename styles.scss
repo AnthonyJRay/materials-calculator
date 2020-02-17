@@ -1,78 +1,99 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .wrapper {
-    background-image: linear-gradient(#3920, #0239);
-    height: 100%;
-    text-align: center;
+  background-image: linear-gradient(#3920, #0239);
+  height: 100%;
+  text-align: center;
 }
 
 .main-header {
-    border: 1px solid black;
-    width: 90%;
-    margin: 10px auto;
+  border: 1px solid black;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.material-card {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
 }
 
 // Material Dropdown Menu Styles
 .material-dropdown {
-    border: .5px solid black;
-    border-radius: 2px;
-    padding: 8px;
-    background-color: inherit;
+  border: 0.5px solid black;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 3rem;
+  background-color: inherit;
 }
 
 // Add Area Button Styles
 .add-area {
-    padding: 8px;
+  padding: 8px;
 }
 
 .measurements {
-    margin-top: 16px;
+  margin-top: 16px;
 }
 
 .measurements-card {
-    border: 1px solid black;
-    width: 75%;
-    padding: 15px;
-    margin: 10px auto;
+  border: 1px solid black;
+  width: 75%;
+  padding: 15px;
+  margin: 10px auto;
 }
 
 .newArea {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .lengthWrapper,
 .widthWrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    &>.innerLabel {
-        margin-bottom: 0;
-    }
+  & > .innerLabel {
+    margin-bottom: 0;
+  }
 }
 
 // Measurement Input Styles
 .length-measurement,
 .width-measurement {
-    width: 100px;
-    margin: 8px;
-    font-size: 24px;
-    letter-spacing: 2px;
-    text-align: center;
+  width: 100px;
+  margin: 8px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .material-list {
-    padding: 0;
+  padding: 0;
 }
 
 .material-item {
-    list-style-type: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 65%;
+  margin: auto;
+}
+
+.box-sizing-active {
+  visibility: hidden;
+  & > .box-sizing-form {
     display: flex;
-    justify-content: space-around;
-    width: 65%;
-    margin: auto;
+    justify-content: center;
+    margin: 8px;
+    padding: 8px;
+    & > .size-label {
+      margin-right: 16px;
+    }
+  }
 }
