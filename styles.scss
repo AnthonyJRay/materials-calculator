@@ -12,12 +12,14 @@ $Warning: rgb(253, 217, 96);
 $WarningHover: rgb(234, 216, 154);
 
 body {
+  width: 100vw;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-image: url('./dist/assets/flooring-image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
 }
 
 .wrapper {
