@@ -11,6 +11,7 @@ const laborPrice = document.querySelector('.bid-price-value');
 const boxSize = document.querySelector('.box-sizing-active');
 const roomsWrapper = document.querySelector('.rooms-wrapper');
 const resetButton = document.querySelector('.reset-button');
+const demoCheckbox = document.querySelector('#check-demo');
 let materialSelected;
 let comesBoxed;
 let boxSizeNum;
@@ -205,7 +206,12 @@ calcBtn.onclick = () => {
     if (property === materialSelected) {
       materialType.innerHTML = materials[property].type;
       materialAmount.innerHTML = materials[property].calc(totalSum).toFixed(1);
-      const labor = materials[property].price;
+      let labor = materials[property].price;
+      if (demoCheckbox.checked) {
+        let demoPrice = Number(demoCheckbox.value);
+        labor += demoPrice;
+      }
+
       laborPrice.innerHTML =
         '$ ' + materials[property].calcLabor(totalSum, labor).toFixed(2);
     }

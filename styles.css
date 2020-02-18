@@ -96,6 +96,12 @@ body {
   text-align: center;
 }
 
+.demo-label {
+  font-weight: bold;
+  color: #5c3834;
+  text-shadow: 2.7px 2.7px #d1d1d1;
+}
+
 .stats-wrapper {
   background-color: rgba(207, 207, 207, 0.408);
   border-radius: 5px;
@@ -381,10 +387,10 @@ body {
 }
 
 .required {
-  font-style: italic;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  color: #e15a46;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+  letter-spacing: 1px;
+  color: red;
   font-weight: bold;
 }
 

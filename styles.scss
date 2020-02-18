@@ -10,6 +10,7 @@ $Corner-Rounded: 5px;
 $Stat-Display: rgb(255, 255, 255);
 $Warning: rgb(253, 217, 96);
 $WarningHover: rgb(234, 216, 154);
+$Required: red;
 
 body {
   width: 100vw;
@@ -88,6 +89,12 @@ body {
   & > .material-option {
     text-align: center;
   }
+}
+
+.demo-label {
+  font-weight: bold;
+  color: rgb(92, 56, 52);
+  text-shadow: 2.7px 2.7px rgb(209, 209, 209);
 }
 
 .stats-wrapper {
@@ -310,10 +317,10 @@ body {
 }
 
 .required {
-  font-style: italic;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  color: $Danger;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+  letter-spacing: 1px;
+  color: $Required;
   font-weight: bold;
 }
 
