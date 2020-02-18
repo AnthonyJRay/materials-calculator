@@ -1,4 +1,5 @@
 $Quicksand: 'Quicksand', sans-serif;
+$Raleway: 'Raleway', sans-serif;
 $Ubuntu: 'Ubuntu', sans-serif;
 $Danger: #e15a46;
 $DangerHover: #af4838;
@@ -6,6 +7,7 @@ $Green: #64e687;
 $GreenHover: #4db769;
 $Transparent-Bg: rgba(207, 207, 207, 0.408);
 $Corner-Rounded: 5px;
+$Stat-Display: rgb(255, 255, 255);
 
 body {
   margin: 0;
@@ -27,17 +29,13 @@ body {
   width: 75%;
   margin: 10px auto;
   padding: 16px;
-  font-family: $Quicksand;
+  font-family: $Raleway;
   background-color: $Transparent-Bg;
   border-radius: $Corner-Rounded;
-  color: rgba(78, 20, 15, 0.877);
+  color: rgb(92, 56, 52);
+  text-shadow: 2.7px 2.7px rgb(209, 209, 209);
+  font-size: 2.5 rem;
 }
-
-// May use later, don't remove yet!
-// .company-caption {
-//   font-size: 10px;
-//   font-style: italic;
-// }
 
 .material-card {
   display: flex;
@@ -53,6 +51,8 @@ body {
 .dropdown-label {
   margin: 1em;
   font-weight: bold;
+  color: rgb(92, 56, 52);
+  text-shadow: 2.7px 2.7px rgb(209, 209, 209);
 }
 
 // Material Dropdown Menu Styles
@@ -215,11 +215,37 @@ body {
   }
 }
 
+.card-title {
+  color: rgb(92, 56, 52);
+  text-shadow: 1px 1px rgb(209, 209, 209);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.material-type-label,
+.material-amount-label {
+  color: rgb(92, 56, 52);
+  text-shadow: 1px 1px rgb(209, 209, 209);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.card-display {
+  font-size: 3rem;
+  color: $Stat-Display;
+}
+.material-type-value,
+.material-amount-value {
+  font-size: 1.4rem;
+  color: $Stat-Display;
+}
+
 .required {
   font-style: italic;
   font-size: 1.1rem;
   letter-spacing: 2px;
-  color: red;
+  color: $Danger;
   font-weight: bold;
 }
 

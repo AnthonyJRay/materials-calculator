@@ -18,10 +18,12 @@ body {
   width: 75%;
   margin: 10px auto;
   padding: 16px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: rgba(207, 207, 207, 0.408);
   border-radius: 5px;
-  color: rgba(78, 20, 15, 0.877);
+  color: #5c3834;
+  text-shadow: 2.7px 2.7px #d1d1d1;
+  font-size: 2.5 rem;
 }
 
 .material-card {
@@ -45,6 +47,8 @@ body {
 .dropdown-label {
   margin: 1em;
   font-weight: bold;
+  color: #5c3834;
+  text-shadow: 2.7px 2.7px #d1d1d1;
 }
 
 .material-dropdown {
@@ -234,11 +238,38 @@ body {
   font-size: 14px;
 }
 
+.card-title {
+  color: #5c3834;
+  text-shadow: 1px 1px #d1d1d1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.material-type-label,
+.material-amount-label {
+  color: #5c3834;
+  text-shadow: 1px 1px #d1d1d1;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.card-display {
+  font-size: 3rem;
+  color: white;
+}
+
+.material-type-value,
+.material-amount-value {
+  font-size: 1.4rem;
+  color: white;
+}
+
 .required {
   font-style: italic;
   font-size: 1.1rem;
   letter-spacing: 2px;
-  color: red;
+  color: #e15a46;
   font-weight: bold;
 }
 
