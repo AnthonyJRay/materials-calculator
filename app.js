@@ -7,6 +7,7 @@ const areaDisplay = document.querySelector('.display-area');
 const dropdown = document.querySelector('.material-dropdown');
 const materialType = document.querySelector('.material-type-value');
 const materialAmount = document.querySelector('.material-amount-value');
+const laborPrice = document.querySelector('.bid-price-value');
 const boxSize = document.querySelector('.box-sizing-active');
 const roomsWrapper = document.querySelector('.rooms-wrapper');
 const resetButton = document.querySelector('.reset-button');
@@ -45,32 +46,52 @@ if (document.querySelector('#size-value-16').checked) {
 const materials = {
   carpet: {
     type: 'Carpet',
+    price: 1.1,
     calc: (sqft, rollWidth = 12) => {
       return sqft / rollWidth;
+    },
+    calcLabor: (sqft, price) => {
+      return sqft * price;
     }
   },
   hardwood: {
     type: 'Engineered Hardwood',
+    price: 3.75,
     calc: (sqft, boxft = boxSizeNum) => {
       return sqft / boxft;
+    },
+    calcLabor: (sqft, price) => {
+      return sqft * price;
     }
   },
   lvp: {
     type: 'Luxury Vinyl Plank',
+    price: 2.75,
     calc: (sqft, boxft = boxSizeNum) => {
       return sqft / boxft;
+    },
+    calcLabor: (sqft, price) => {
+      return sqft * price;
     }
   },
   laminate: {
     type: 'Laminate',
+    price: 3.0,
     calc: (sqft, boxft = boxSizeNum) => {
       return sqft / boxft;
+    },
+    calcLabor: (sqft, price) => {
+      return sqft * price;
     }
   },
   linoleum: {
     type: 'Sheet Vinyl',
+    price: 1.5,
     calc: (sqft, rollWidth = 12) => {
       return sqft / rollWidth;
+    },
+    calcLabor: (sqft, price) => {
+      return sqft * price;
     }
   }
 };
@@ -184,6 +205,9 @@ calcBtn.onclick = () => {
     if (property === materialSelected) {
       materialType.innerHTML = materials[property].type;
       materialAmount.innerHTML = materials[property].calc(totalSum).toFixed(1);
+      const labor = materials[property].price;
+      laborPrice.innerHTML =
+        '$ ' + materials[property].calcLabor(totalSum, labor).toFixed(2);
     }
   }
 

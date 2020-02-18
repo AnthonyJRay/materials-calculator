@@ -343,7 +343,8 @@ body {
 }
 
 .material-type-label,
-.material-amount-label {
+.material-amount-label,
+.bid-price-label {
   color: #5c3834;
   text-shadow: 1px 1px #d1d1d1;
   font-weight: bold;
@@ -361,16 +362,22 @@ body {
 }
 
 .material-type-value,
-.material-amount-value {
+.material-amount-value,
+.bid-price-value {
   font-size: 1.4rem;
   color: white;
 }
 
 @media (min-width: 675px) {
   .material-type-value,
-  .material-amount-value {
+  .material-amount-value,
+  .bid-price-value {
     font-size: 2rem;
   }
+}
+
+.bid-price-value {
+  color: #6fac4b;
 }
 
 .required {
