@@ -9,6 +9,7 @@ const materialType = document.querySelector('.material-type-value');
 const materialAmount = document.querySelector('.material-amount-value');
 const boxSize = document.querySelector('.box-sizing-active');
 const roomsWrapper = document.querySelector('.rooms-wrapper');
+const resetButton = document.querySelector('.reset-button');
 let materialSelected;
 let comesBoxed;
 let boxSizeNum;
@@ -112,6 +113,17 @@ addAreaBtn.onclick = () => {
   delButton.addEventListener('click', function() {
     delButton.parentElement.remove();
   });
+};
+
+resetButton.onclick = () => {
+  if (document.querySelector('.new-area')) {
+    const areas = [...document.querySelectorAll('.new-area')];
+    areas.forEach(
+      (listItem = li => {
+        li.remove();
+      })
+    );
+  }
 };
 
 // Calculate button

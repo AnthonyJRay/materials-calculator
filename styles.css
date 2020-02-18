@@ -21,6 +21,8 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: rgba(207, 207, 207, 0.408);
   border-radius: 5px;
+  -webkit-box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
+          box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
   color: #5c3834;
   text-shadow: 2.7px 2.7px #d1d1d1;
   font-size: 2.5 rem;
@@ -48,6 +50,8 @@ body {
   margin: auto;
   background-color: rgba(207, 207, 207, 0.408);
   border-radius: 5px;
+  -webkit-box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
+          box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
 }
 
 @media (min-width: 875px) {
@@ -93,6 +97,8 @@ body {
 .stats-wrapper {
   background-color: rgba(207, 207, 207, 0.408);
   border-radius: 5px;
+  -webkit-box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
+          box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
   max-width: 75%;
   margin: auto;
   padding: 16px;
@@ -131,6 +137,8 @@ body {
   margin: 10px auto;
   background-color: rgba(207, 207, 207, 0.408);
   border-radius: 5px;
+  -webkit-box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
+          box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
 }
 
 @media (min-width: 875px) {
@@ -183,7 +191,7 @@ body {
 
 .length-measurement > input,
 .width-measurement > input {
-  width: 35px;
+  width: 40%;
   margin: 0.5rem;
 }
 
@@ -196,9 +204,8 @@ body {
 
 .length-measurement > .input-label,
 .width-measurement > .input-label {
-  font-style: italic;
   color: #5c3834;
-  margin: 1.75rem;
+  margin: 10%;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -238,6 +245,24 @@ body {
   }
 }
 
+.reset-button {
+  background-color: #fdd960;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-style: none;
+  border-radius: 5px;
+  padding: 16px;
+  margin-top: 32px;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.reset-button:hover {
+  background-color: #ead89a;
+}
+
 .calc-btn {
   background-color: #64e687;
   color: #fff;
@@ -246,6 +271,7 @@ body {
   border-style: none;
   border-radius: 5px;
   padding: 16px;
+  margin-top: 32px;
   letter-spacing: 1px;
   font-size: 1.4rem;
   font-family: "Ubuntu", sans-serif;
