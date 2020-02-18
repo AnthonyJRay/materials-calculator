@@ -143,6 +143,7 @@ body {
   justify-content: center;
   border-radius: 5px;
   background-color: rgba(224, 224, 224, 0.809);
+  transition: width 2s;
 }
 
 .rooms-wrapper {
@@ -160,7 +161,7 @@ body {
 .width-measurement {
   align-self: center;
   & > input {
-    width: 40%;
+    width: 35%;
     margin: 0.5rem;
     @media (min-width: 675px) {
       margin: 0;
@@ -207,6 +208,7 @@ body {
   border-radius: 5px;
   padding: 16px;
   margin-top: 32px;
+  margin-right: 8px;
   letter-spacing: 1px;
   font-size: 1.4rem;
   font-family: $Ubuntu;
@@ -225,6 +227,7 @@ body {
   border-radius: 5px;
   padding: 16px;
   margin-top: 32px;
+  margin-left: 8px;
   letter-spacing: 1px;
   font-size: 1.4rem;
   font-family: $Ubuntu;
@@ -252,6 +255,9 @@ body {
   padding: 16px;
   margin: 1rem auto;
   border-radius: $Corner-Rounded;
+  @media (min-width: 875px) {
+    width: 50%;
+  }
   & > .box-sizing-form {
     display: flex;
     justify-content: center;
@@ -279,6 +285,8 @@ body {
   text-shadow: 1px 1px rgb(209, 209, 209);
   font-weight: bold;
   letter-spacing: 1px;
+  display: flex;
+  align-self: center;
 }
 
 .card-display {
@@ -289,6 +297,9 @@ body {
 .material-amount-value {
   font-size: 1.4rem;
   color: $Stat-Display;
+  @media (min-width: 675px) {
+    font-size: 2rem;
+  }
 }
 
 .required {
