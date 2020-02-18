@@ -86,6 +86,7 @@ addAreaBtn.onclick = () => {
   roomLength.type = 'text';
   roomLength.classList.add('length-input');
   let lengthLabel = document.createElement('span');
+  lengthLabel.classList.add('input-label');
   lengthLabel.innerHTML = 'Length';
   let lengthWrapper = document.createElement('div');
   lengthWrapper.classList.add('length-measurement');
@@ -96,6 +97,7 @@ addAreaBtn.onclick = () => {
   roomWidth.type = 'text';
   roomWidth.classList.add('width-input');
   let widthLabel = document.createElement('span');
+  widthLabel.classList.add('input-label');
   widthLabel.innerHTML = 'Width';
   let widthWrapper = document.createElement('div');
   widthWrapper.classList.add('width-measurement');

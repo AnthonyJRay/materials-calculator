@@ -26,6 +26,12 @@ body {
   font-size: 2.5 rem;
 }
 
+@media (min-width: 875px) {
+  .main-header {
+    width: 50%;
+  }
+}
+
 .material-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,6 +50,12 @@ body {
   border-radius: 5px;
 }
 
+@media (min-width: 875px) {
+  .material-card {
+    width: 50%;
+  }
+}
+
 .dropdown-label {
   margin: 1em;
   font-weight: bold;
@@ -58,6 +70,12 @@ body {
   margin-bottom: 3rem;
   background-color: rgba(250, 250, 250, 0.823);
   border: none;
+}
+
+@media (min-width: 875px) {
+  .material-dropdown {
+    width: 50%;
+  }
 }
 
 .material-dropdown:hover {
@@ -78,6 +96,12 @@ body {
   max-width: 75%;
   margin: auto;
   padding: 16px;
+}
+
+@media (min-width: 875px) {
+  .stats-wrapper {
+    width: 50%;
+  }
 }
 
 .add-area {
@@ -109,6 +133,12 @@ body {
   border-radius: 5px;
 }
 
+@media (min-width: 875px) {
+  .measurements-card {
+    width: 50%;
+  }
+}
+
 .new-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,9 +153,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #333;
   border-radius: 5px;
-  background-color: rgba(224, 223, 223, 0.442);
+  background-color: rgba(224, 224, 224, 0.809);
 }
 
 .rooms-wrapper {
@@ -145,24 +174,53 @@ body {
           align-items: center;
 }
 
-.length-measurement > input,
-.width-measurement > input {
-  width: 50px;
+.length-measurement,
+.width-measurement {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.length-measurement > span,
-.width-measurement > span {
+.length-measurement > input,
+.width-measurement > input {
+  width: 35px;
+  margin: 0.5rem;
+}
+
+@media (min-width: 675px) {
+  .length-measurement > input,
+  .width-measurement > input {
+    margin: 0;
+  }
+}
+
+.length-measurement > .input-label,
+.width-measurement > .input-label {
   font-style: italic;
-  margin: 1rem;
-  font-size: 10px;
+  color: #5c3834;
+  margin: 1.75rem;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 675px) {
+  .length-measurement > .input-label,
+  .width-measurement > .input-label {
+    margin: 8px;
+    padding-right: 32px;
+  }
 }
 
 .delButton {
-  width: 20px;
-  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 25px;
+  height: 25px;
   text-align: center;
-  margin: 0;
-  padding: 0;
   border: none;
   background-color: #e15a46;
   color: #fff;

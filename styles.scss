@@ -35,6 +35,9 @@ body {
   color: rgb(92, 56, 52);
   text-shadow: 2.7px 2.7px rgb(209, 209, 209);
   font-size: 2.5 rem;
+  @media (min-width: 875px) {
+    width: 50%;
+  }
 }
 
 .material-card {
@@ -42,6 +45,9 @@ body {
   flex-direction: column;
   align-items: center;
   width: 75%;
+  @media (min-width: 875px) {
+    width: 50%;
+  }
   padding: 16px;
   margin: auto;
   background-color: $Transparent-Bg;
@@ -58,6 +64,9 @@ body {
 // Material Dropdown Menu Styles
 .material-dropdown {
   width: 75%;
+  @media (min-width: 875px) {
+    width: 50%;
+  }
   border-radius: 2px;
   padding: 16px;
   margin-bottom: 3rem;
@@ -80,6 +89,9 @@ body {
   background-color: $Transparent-Bg;
   border-radius: $Corner-Rounded;
   max-width: 75%;
+  @media (min-width: 875px) {
+    width: 50%;
+  }
   margin: auto;
   padding: 16px;
 }
@@ -107,6 +119,9 @@ body {
 
 .measurements-card {
   width: 75%;
+  @media (min-width: 875px) {
+    width: 50%;
+  }
   padding: 16px;
   margin: 10px auto;
   background-color: $Transparent-Bg;
@@ -120,9 +135,8 @@ body {
   margin: 0.5em;
   padding: 16px;
   justify-content: center;
-  border: 1px solid #333;
   border-radius: 5px;
-  background-color: rgba(224, 223, 223, 0.442);
+  background-color: rgba(224, 224, 224, 0.809);
 }
 
 .rooms-wrapper {
@@ -138,22 +152,34 @@ body {
 // Measurement Input Styles
 .length-measurement,
 .width-measurement {
+  align-self: center;
   & > input {
-    width: 50px;
+    width: 35px;
+    margin: 0.5rem;
+    @media (min-width: 675px) {
+      margin: 0;
+    }
   }
-  & > span {
+  & > .input-label {
     font-style: italic;
-    margin: 1rem;
-    font-size: 10px;
+    color: rgb(92, 56, 52);
+    margin: 1.75rem;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    @media (min-width: 675px) {
+      margin: 8px;
+      padding-right: 32px;
+    }
   }
 }
 
 .delButton {
-  width: 20px;
-  height: 20px;
+  display: flex;
+  align-self: center;
+  width: 25px;
+  height: 25px;
   text-align: center;
-  margin: 0;
-  padding: 0;
   border: none;
   background-color: $Danger;
   color: #fff;
