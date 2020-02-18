@@ -15,3 +15,5 @@ This application will take in rooms, and their dimensions. It will then output t
 - Click "Calculate" to take all the options and output totals.
 
 - All pricing is hardcoded. May implement a dynamic square foot pricing option in the future.
+
+- Measurement inputs don't currently have integer validation. _In progress_
