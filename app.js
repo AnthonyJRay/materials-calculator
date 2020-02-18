@@ -132,7 +132,7 @@ addAreaBtn.onclick = () => {
   newRoom.appendChild(widthWrapper);
   roomsWrapper.appendChild(newRoom);
 
-  delButton.addEventListener('click', function() {
+  delButton.addEventListener('click', () => {
     delButton.parentElement.remove();
   });
 };
@@ -171,6 +171,7 @@ calcBtn.onclick = () => {
     if (!widthStr) {
       widthEmpty = true;
     }
+
     const widthInt = parseInt(widthStr, 10);
     widthArr.push(widthInt);
   });
