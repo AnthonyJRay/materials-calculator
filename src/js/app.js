@@ -1,3 +1,5 @@
+// jshint ignore: start
+
 // Global Variables
 const addAreaBtn = document.querySelector('.add-area');
 const measurementsBody = document.querySelector('.measurements');
