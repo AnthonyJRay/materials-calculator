@@ -1,11 +1,29 @@
 {
   "name": "materials-calculator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Floor replacement calculator. Created for Vanguard Construction LLC estimation process.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyJRay/materials-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnthonyJRay/materials-calculator/issues"
+  },
+  "homepage": "https://github.com/AnthonyJRay/materials-calculator#readme",
+  "devDependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6"
+  }
 }
