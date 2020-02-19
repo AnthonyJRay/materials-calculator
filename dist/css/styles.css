@@ -4,7 +4,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-image: url("./dist/assets/flooring-image.jpg");
+  background-image: url("../assets/flooring-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -14,11 +14,12 @@ body {
   height: 100%;
   text-align: center;
   font-family: "Ubuntu", sans-serif;
+  padding-bottom: 100px;
 }
 
 .main-header {
   width: 75%;
-  margin: 10px auto;
+  margin: 16px auto;
   padding: 16px;
   font-family: "Raleway", sans-serif;
   background-color: rgba(207, 207, 207, 0.408);
@@ -51,7 +52,7 @@ body {
           align-items: center;
   width: 75%;
   padding: 16px;
-  margin: auto;
+  margin: 16px auto;
   background-color: rgba(207, 207, 207, 0.408);
   border-radius: 5px;
   -webkit-box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
@@ -112,7 +113,7 @@ body {
   -webkit-box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
           box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
   max-width: 75%;
-  margin: auto;
+  margin: 16px auto;
   padding: 16px;
   -webkit-animation: SlideLeft 1.2s forwards 0s linear;
           animation: SlideLeft 1.2s forwards 0s linear;
@@ -148,7 +149,7 @@ body {
 .measurements-card {
   width: 75%;
   padding: 16px;
-  margin: 10px auto;
+  margin: 16px auto;
   background-color: rgba(207, 207, 207, 0.408);
   border-radius: 5px;
   -webkit-box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
@@ -171,7 +172,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 75%;
   margin: 0.5em;
   padding: 16px;
   -webkit-box-pack: center;

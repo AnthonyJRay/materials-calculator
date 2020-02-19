@@ -1,6 +1,9 @@
-$Quicksand: 'Quicksand', sans-serif;
-$Raleway: 'Raleway', sans-serif;
-$Ubuntu: 'Ubuntu', sans-serif;
+$Quicksand: 'Quicksand',
+sans-serif;
+$Raleway: 'Raleway',
+sans-serif;
+$Ubuntu: 'Ubuntu',
+sans-serif;
 $Danger: #e15a46;
 $DangerHover: #af4838;
 $Green: #64e687;
@@ -15,12 +18,17 @@ $Required: red;
 $FadeInLeft: SlideLeft 1.2s forwards 0s linear;
 $FadeInRight: SlideRight 1.2s forwards 0s linear;
 
+@mixin BaseContainer {
+  margin: 16px auto;
+  padding: 16px;
+}
+
 body {
   width: 100vw;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url('./dist/assets/flooring-image.jpg');
+  background-image: url('../assets/flooring-image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -30,12 +38,12 @@ body {
   height: 100%;
   text-align: center;
   font-family: $Ubuntu;
+  padding-bottom: 100px;
 }
 
 .main-header {
   width: 75%;
-  margin: 10px auto;
-  padding: 16px;
+  @include BaseContainer();
   font-family: $Raleway;
   background-color: $Transparent-Bg;
   border-radius: $Corner-Rounded;
@@ -43,9 +51,11 @@ body {
   color: rgb(92, 56, 52);
   text-shadow: 2.7px 2.7px rgb(209, 209, 209);
   font-size: 2.5 rem;
+
   @media (min-width: 875px) {
     width: 50%;
   }
+
   animation: $FadeInRight;
 }
 
@@ -54,11 +64,12 @@ body {
   flex-direction: column;
   align-items: center;
   width: 75%;
+
   @media (min-width: 875px) {
     width: 50%;
   }
-  padding: 16px;
-  margin: auto;
+
+  @include BaseContainer();
   background-color: $Transparent-Bg;
   border-radius: $Corner-Rounded;
   box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
@@ -75,23 +86,28 @@ body {
 // Material Dropdown Menu Styles
 .material-dropdown {
   width: 75%;
+
   @media (min-width: 875px) {
     width: 50%;
   }
+
   border-radius: 2px;
   padding: 16px;
   margin-bottom: 3rem;
   background-color: rgba(250, 250, 250, 0.823);
   border: none;
+
   &:hover {
     background-color: #fff;
     // border: 0.85px solid #0239;
   }
+
   &:active,
   &:focus {
     background-color: inherit;
   }
-  & > .material-option {
+
+  &>.material-option {
     text-align: center;
   }
 }
@@ -107,11 +123,12 @@ body {
   border-radius: $Corner-Rounded;
   box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
   max-width: 75%;
+
   @media (min-width: 875px) {
     width: 50%;
   }
-  margin: auto;
-  padding: 16px;
+
+  @include BaseContainer();
   animation: $FadeInLeft;
 }
 
@@ -127,6 +144,7 @@ body {
   border-radius: 5px;
   letter-spacing: 1px;
   font-family: $Ubuntu;
+
   &:hover {
     background-color: $GreenHover;
   }
@@ -138,11 +156,12 @@ body {
 
 .measurements-card {
   width: 75%;
+
   @media (min-width: 875px) {
     width: 50%;
   }
-  padding: 16px;
-  margin: 10px auto;
+
+  @include BaseContainer();
   background-color: $Transparent-Bg;
   border-radius: $Corner-Rounded;
   box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
@@ -152,7 +171,6 @@ body {
 .new-area {
   display: flex;
   flex-direction: row;
-  width: 75%;
   margin: 0.5em;
   padding: 16px;
   justify-content: center;
@@ -175,19 +193,23 @@ body {
 .length-measurement,
 .width-measurement {
   align-self: center;
-  & > input {
+
+  &>input {
     width: 35%;
     margin: 0.5rem;
+
     @media (min-width: 675px) {
       margin: 0;
     }
   }
-  & > .input-label {
+
+  &>.input-label {
     color: rgb(92, 56, 52);
     margin: 10%;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
+
     @media (min-width: 675px) {
       margin: 8px;
       padding-right: 32px;
@@ -206,9 +228,11 @@ body {
   color: #fff;
   font-weight: bold;
   border-radius: 2px;
+
   &:hover {
     background-color: $DangerHover;
   }
+
   @media (min-width: 559px) {
     margin-right: 16px;
   }
@@ -246,6 +270,7 @@ body {
   letter-spacing: 1px;
   font-size: 1.4rem;
   font-family: $Ubuntu;
+
   &:hover {
     background-color: $GreenHover;
   }
@@ -267,18 +292,20 @@ body {
   display: none;
   background-color: rgba(197, 224, 186, 0.823);
   width: 75%;
-  padding: 16px;
-  margin: 1rem auto;
+  @include BaseContainer();
   border-radius: $Corner-Rounded;
+
   @media (min-width: 875px) {
     width: 50%;
   }
-  & > .box-sizing-form {
+
+  &>.box-sizing-form {
     display: flex;
     justify-content: center;
     margin: 8px;
     padding: 8px;
-    & > .size-label {
+
+    &>.size-label {
       margin-right: 16px;
       letter-spacing: 1px;
       font-size: 14px;
@@ -309,11 +336,13 @@ body {
   font-size: 3rem;
   color: $Stat-Display;
 }
+
 .material-type-value,
 .material-amount-value,
 .bid-price-value {
   font-size: 1.4rem;
   color: $Stat-Display;
+
   @media (min-width: 675px) {
     font-size: 2rem;
   }
