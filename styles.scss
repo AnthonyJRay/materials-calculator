@@ -12,6 +12,9 @@ $Warning: rgb(253, 217, 96);
 $WarningHover: rgb(234, 216, 154);
 $Required: red;
 
+$FadeInLeft: SlideLeft 1.2s forwards 0s linear;
+$FadeInRight: SlideRight 1.2s forwards 0s linear;
+
 body {
   width: 100vw;
   margin: 0;
@@ -43,6 +46,7 @@ body {
   @media (min-width: 875px) {
     width: 50%;
   }
+  animation: $FadeInRight;
 }
 
 .material-card {
@@ -58,6 +62,7 @@ body {
   background-color: $Transparent-Bg;
   border-radius: $Corner-Rounded;
   box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
+  animation: $FadeInLeft;
 }
 
 .dropdown-label {
@@ -107,6 +112,7 @@ body {
   }
   margin: auto;
   padding: 16px;
+  animation: $FadeInLeft;
 }
 
 // Add Area Button Styles
@@ -140,6 +146,7 @@ body {
   background-color: $Transparent-Bg;
   border-radius: $Corner-Rounded;
   box-shadow: 3px 3px rgba(29, 29, 29, 0.122);
+  animation: $FadeInRight;
 }
 
 .new-area {
@@ -328,4 +335,40 @@ body {
   color: $Danger;
   font-size: 12px;
   font-style: italic;
+}
+
+// Animations
+
+@keyframes SlideRight {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: rotate(xx) translateX(-5%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(xx) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes SlideLeft {
+  0% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: rotate(xx) translateX(5%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(xx) translateX(0);
+    opacity: 1;
+  }
 }
