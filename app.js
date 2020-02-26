@@ -96,7 +96,6 @@ const materials = {
   }
 };
 
-// Add New Area button
 addAreaBtn.onclick = () => {
   let delButton = document.createElement('button');
   delButton.classList.add('delButton');
@@ -147,7 +146,6 @@ resetButton.onclick = () => {
   }
 };
 
-// Calculate button
 calcBtn.onclick = () => {
   const lengths = document.querySelectorAll('input.length-input');
   let lengthArr = [];
@@ -184,7 +182,6 @@ calcBtn.onclick = () => {
     }
   }
 
-  // Display total area in card
   if (lengthEmpty || widthEmpty === true) {
     areaDisplay.innerHTML = `
     <p class="error">Missing Value!</p>
